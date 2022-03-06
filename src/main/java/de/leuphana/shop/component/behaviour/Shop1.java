@@ -18,6 +18,7 @@ import de.leuphana.shop.component.structure.OrderPosition;
 public class Shop1 implements ShopService {
 	private Catalog catalog;
 	private Map<Integer, Customer> customers;
+	private String jakob;
 
 	public Shop1() {
 		customers = new HashMap<Integer, Customer>();
