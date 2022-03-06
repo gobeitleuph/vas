@@ -19,6 +19,7 @@ public class Shop1 implements ShopService {
 	private Catalog catalog;
 	private Map<Integer, Customer> customers;
 	private String jakob;
+	private String patrick;
 
 
 	public Shop1() {
@@ -83,7 +84,7 @@ public class Shop1 implements ShopService {
 		order.setOrderId(1);
 
 		int i = 1;
-		
+
 		Set<OrderPosition> orderPositions = new HashSet<OrderPosition>();
 
 		for (CartItem cartItem : cart.getCartItems()) {
