@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="methodLogger" class="de.leuphana.shop.aop.MethodLogger"/>
+	
+	<bean id="shopProxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="shop"/>
+		<property name="interceptorNames">
+			<list>
+				<value>methodLogger</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="shop" class="de.leuphana.shop.component.behaviour.Shop1"/>
+	
+	<bean id="shopRmiServiceExporter"
+		class="org.springframework.remoting.rmi.RmiServiceExporter">
+		<property name="serviceName" value="shopService" />
+		<property name="service"
+			ref="shopProxyFactoryBean" />
+		<property name="serviceInterface"
+			value="de.leuphana.shop.component.behaviour.ShopService" />
+		<property name="registryPort" value="1099" />
+	</bean>
+</beans>
