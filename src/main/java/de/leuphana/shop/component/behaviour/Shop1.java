@@ -20,6 +20,7 @@ public class Shop1 implements ShopService {
 	private Map<Integer, Customer> customers;
 	private String jakob;
 
+
 	public Shop1() {
 		customers = new HashMap<Integer, Customer>();
 		Integer i = Integer.valueOf(0);
