@@ -10,13 +10,7 @@
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/applicationContext-JDBC-Connector-Client-datasource.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/applicationContext-RMI-Connector-Server.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/applicationContext-JPA-Connector.xml</file>
-        </fileset>
-      </configuration>
+      <configuration />
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6">
